@@ -22,7 +22,7 @@ const PertemuanRow = ({ pertemuan }: { pertemuan: Pertemuan }) => {
 		<>
 			<Tr>
 				<Td>
-					<Link as={NextLink} href={"/kelas/" + kelasId + "/pertemuan/" + pertemuan.id}>
+					<Link as={NextLink} href={"/kelas/" + kelasId + "/pertemuan/" + pertemuan.id + "/" + pertemuan.status}>
 						<Box>
 							<Text fontWeight="semibold">{"Pertemuan ke-" + pertemuan.id}</Text>
 							<Text color="muted">{pertemuan.deskripsi}</Text>
@@ -46,20 +46,22 @@ const PertemuanRow = ({ pertemuan }: { pertemuan: Pertemuan }) => {
 				<Td textAlign="center">
 					<Text fontWeight="semibold" mb="1">{pertemuan.dosen}</Text>
 					<Badge size="sm" colorScheme={
-						pertemuan.status === 1 ?
-							'green' : pertemuan.status === 2 ?
-								'red' : 'gray'}
+						pertemuan.status === "selesai" ?
+							'green' : pertemuan.status === "terlewat" ?
+								'red' : pertemuan.status === "berlangsung" ?
+									'orange' : 'gray'}
 					>
 						{
-							pertemuan.status === 1 ?
-								'Selesai' : pertemuan.status === 2 ?
-									'Terlewat' : 'Belum dimulai'
+							pertemuan.status === "selesai" ?
+								'Selesai' : pertemuan.status === "terlewat" ?
+									'Terlewat' : pertemuan.status === "berlangsung" ?
+										'Berlangsung' : 'Belum dimulai'
 						}
 					</Badge>
 				</Td>
 				<Td>
 					<HStack spacing="1">
-						<Link as={NextLink} href={"/kelas/" + kelasId + "/pertemuan/" + pertemuan.id}>
+						<Link as={NextLink} href={"/kelas/" + kelasId + "/pertemuan/" + pertemuan.id + "/" + pertemuan.status}>
 							<IconButton icon={<FiEye fontSize="1.25rem" />} variant="ghost" aria-label="Lihat pertemuan" />
 						</Link>
 						<Link as={NextLink} href={"/kelas/" + kelasId + "/pertemuan/" + pertemuan.id + "/ubah"}>

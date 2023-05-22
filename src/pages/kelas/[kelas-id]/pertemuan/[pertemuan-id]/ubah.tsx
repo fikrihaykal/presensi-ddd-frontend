@@ -3,7 +3,7 @@ import PageHeaderSection from '@/components/organisms/common/PageHeaderSection'
 import { useRouter } from 'next/router'
 import UbahPertemuanSection from '@/components/organisms/UbahPertemuanSection'
 
-const Beranda = () => {
+const UbahPertemuan = () => {
     const router = useRouter()
     const kelasId = router?.query['kelas-id']
 
@@ -17,4 +17,4 @@ const Beranda = () => {
 	)
 }
 
-export default Beranda
+export default UbahPertemuan

@@ -28,7 +28,7 @@ const GreetingSection = () => {
                                     Selamat datang,
                                 </Text>
                                 <Text fontSize="lg" fontWeight="bold" color="muted">
-                                    Fikri Haykal, S.Kom.
+                                    Rizky Januar Akbar
                                 </Text>
                             </Stack>
                         </Box>

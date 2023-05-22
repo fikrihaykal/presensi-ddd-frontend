@@ -82,7 +82,7 @@ const UbahPertemuanSection = () => {
                                         </Radio>
                                         <Radio value='3' defaultChecked>
                                             <Text as="i">Hybrid</Text>
-                                            <Text fontSize="12">Tatap muka kombinasi <i>online</i> dan <i>offline</i></Text>
+                                            <Text fontSize="12">Pertemuan kombinasi <i>online</i> dan <i>offline</i></Text>
                                         </Radio>
                                     </Stack>
                                 </RadioGroup>

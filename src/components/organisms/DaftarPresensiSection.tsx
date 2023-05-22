@@ -11,8 +11,9 @@ import {
 } from '@chakra-ui/react'
 import DaftarPresensiTable from './DaftarPresensiTable'
 import { daftarPresensi, kolomPresensi } from '@/data/dummy'
+import { StatusPertemuan } from '@/types/pertemuan'
 
-const DaftarPresensiSection = () => {
+const DaftarPresensiSection = ({ status }: { status: StatusPertemuan }) => {
 
     return (
         <>
@@ -22,13 +23,7 @@ const DaftarPresensiSection = () => {
                         <StatGroup alignItems="center" justifyContent="space-between">
                             <Stat textAlign="center">
                                 <StatLabel>
-                                    <Badge colorScheme="gray">Total Mahasiswa</Badge>
-                                </StatLabel>
-                                <StatNumber>16</StatNumber>
-                            </Stat>
-                            <Stat textAlign="center">
-                                <StatLabel>
-                                    <Badge colorScheme="green">hadir</Badge>
+                                    <Badge colorScheme="green">Hadir</Badge>
                                 </StatLabel>
                                 <StatNumber>8</StatNumber>
                             </Stat>
@@ -46,14 +41,25 @@ const DaftarPresensiSection = () => {
                             </Stat>
                             <Stat textAlign="center">
                                 <StatLabel>
-                                    <Badge colorScheme="red">Alpa</Badge>
+                                    <Badge colorScheme="red">Alpa/Belum Tercatat</Badge>
                                 </StatLabel>
                                 <StatNumber>2</StatNumber>
                             </Stat>
-                            <Stack>
-                                <Button colorScheme="green">Tandai Semua Hadir</Button>
-                                <Button colorScheme="red">Tandai Semua Alpa</Button>
-                            </Stack>
+                            <Stat textAlign="center">
+                                <StatLabel>
+                                    <Badge colorScheme="gray">Total Mahasiswa</Badge>
+                                </StatLabel>
+                                <StatNumber>16</StatNumber>
+                            </Stat>
+                            {
+                                status === "berlangsung" || status === "selesai" ?
+                                    <>
+                                        <Stack>
+                                            <Button colorScheme="green">Tandai Semua Hadir</Button>
+                                            <Button colorScheme="red">Tandai Semua Alpa</Button>
+                                        </Stack>
+                                    </> : null
+                            }
                         </StatGroup>
                     </Box>
                 </Container>
@@ -64,7 +70,7 @@ const DaftarPresensiSection = () => {
                     <Box bg="bg-surface" boxShadow="sm" borderRadius="lg" p={{ base: '4', md: '6' }}>
                         <Stack spacing="5">
                             <Box overflowX="auto">
-                                <DaftarPresensiTable header={kolomPresensi} data={daftarPresensi} />
+                                <DaftarPresensiTable header={kolomPresensi} data={daftarPresensi} status={status} />
                             </Box>
                         </Stack>
                     </Box>

@@ -3,7 +3,7 @@ import DaftarPertemuanSection from '@/components/organisms/DaftarPertemuanSectio
 import DetailKelasSection from '@/components/organisms/DetailKelasSection'
 import PageHeaderSection from '@/components/organisms/common/PageHeaderSection'
 
-const Beranda = () => {
+const DetailKelas = () => {
 
 	return (
 		<>
@@ -16,4 +16,4 @@ const Beranda = () => {
 	)
 }
 
-export default Beranda
+export default DetailKelas

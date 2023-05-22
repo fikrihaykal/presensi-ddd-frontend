@@ -38,7 +38,7 @@ const DetailKelasSection = () => {
                                     Dosen:
                                 </Text>
                                 <Text fontWeight="bold" color="muted">
-                                    Fikri Haykal, S.Kom.
+                                    Rizky Januar Akbar
                                 </Text>
                             </Stack>
                         </Stack>

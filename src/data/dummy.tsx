@@ -41,7 +41,7 @@ const daftarPertemuan: Array<Pertemuan> = [
         "jam": "08.00 - 10.50",
         "lokasi": "TIF 201",
         "dosen": "Rizky Januar Akbar",
-        "status": 1
+        "status": "selesai"
     },
     {
         "id": "2",
@@ -50,7 +50,7 @@ const daftarPertemuan: Array<Pertemuan> = [
         "jam": "13.30 - 16.20",
         "lokasi": "TIF 104",
         "dosen": "Rizky Januar Akbar",
-        "status": 1
+        "status": "selesai"
     },
     {
         "id": "3",
@@ -59,7 +59,7 @@ const daftarPertemuan: Array<Pertemuan> = [
         "jam": "10.00 - 12.50",
         "lokasi": "TIF 306",
         "dosen": "Rizky Januar Akbar",
-        "status": 1
+        "status": "selesai"
     },
     {
         "id": "4",
@@ -68,7 +68,7 @@ const daftarPertemuan: Array<Pertemuan> = [
         "jam": "14.00 - 16.50",
         "lokasi": "TIF 403",
         "dosen": "Rizky Januar Akbar",
-        "status": 1
+        "status": "selesai"
     },
     {
         "id": "5",
@@ -76,8 +76,8 @@ const daftarPertemuan: Array<Pertemuan> = [
         "hari": "Jumat",
         "jam": "09.30 - 12.20",
         "lokasi": "TIF 105",
-        "dosen": "Rizky Januar Akbar",
-        "status": 1
+        "dosen": null,
+        "status": "terlewat"
     },
     {
         "id": "6",
@@ -86,7 +86,7 @@ const daftarPertemuan: Array<Pertemuan> = [
         "jam": "13.00 - 15.50",
         "lokasi": "TIF 306",
         "dosen": null,
-        "status": 2
+        "status": "terlewat"
     },
     {
         "id": "7",
@@ -95,7 +95,7 @@ const daftarPertemuan: Array<Pertemuan> = [
         "jam": "10.00 - 12.50",
         "lokasi": "TIF 403",
         "dosen": null,
-        "status": 2
+        "status": "berlangsung"
     },
     {
         "id": "8",
@@ -104,7 +104,7 @@ const daftarPertemuan: Array<Pertemuan> = [
         "jam": "08.30 - 11.20",
         "lokasi": "TIF 201",
         "dosen": null,
-        "status": 0
+        "status": "belum-mulai"
     }
 ]
 

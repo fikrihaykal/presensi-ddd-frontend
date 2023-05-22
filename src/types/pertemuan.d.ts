@@ -1,3 +1,5 @@
+type StatusPertemuan = "belum-mulai" | "terlewat" | "berlangsung" | "selesai"
+
 interface Pertemuan {
     id: string,
     deskripsi: string,
@@ -5,7 +7,7 @@ interface Pertemuan {
     jam: string,
     lokasi: string,
     dosen: ?string,
-    status: number
+    status: StatusPertemuan
 }
 
-export { Pertemuan }
+export { Pertemuan, StatusPertemuan }

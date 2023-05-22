@@ -3,20 +3,14 @@ import {
 	Box,
 	Button,
 	HStack,
-	IconButton,
-	Link,
 	Td,
 	Text,
 	Tr
 } from '@chakra-ui/react'
-import NextLink from 'next/link'
 import { Presensi } from '@/types/presensi'
-import { FiEdit2, FiEye } from 'react-icons/fi'
-import { useRouter } from 'next/router'
+import { StatusPertemuan } from '@/types/pertemuan'
 
-const PresensiRow = ({ presensi }: { presensi: Presensi }) => {
-	const router = useRouter()
-	const kelasId = router?.query['kelas-id']
+const PresensiRow = ({ presensi, status }: { presensi: Presensi, status: StatusPertemuan }) => {
 
 	return (
 		<>
@@ -43,12 +37,17 @@ const PresensiRow = ({ presensi }: { presensi: Presensi }) => {
 					</Badge>
 				</Td>
 				<Td w="20%">
-					<HStack spacing="1">
-						<Button>H</Button>
-						<Button>S</Button>
-						<Button>I</Button>
-						<Button>A</Button>
-					</HStack>
+					{
+						status === "berlangsung" || status === "selesai" ?
+							<>
+								<HStack spacing="1">
+									<Button>H</Button>
+									<Button>S</Button>
+									<Button>I</Button>
+									<Button>A</Button>
+								</HStack>
+							</> : <Text color="red">BELUM TERCATAT</Text>
+					}
 				</Td>
 			</Tr>
 		</>

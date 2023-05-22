@@ -14,7 +14,6 @@ import {
     Stack,
     Text,
     Textarea,
-    useBreakpointValue,
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
@@ -84,7 +83,7 @@ const TambahPertemuanSection = () => {
                                         </Radio>
                                         <Radio value='3'>
                                             <Text as="i">Hybrid</Text>
-                                            <Text fontSize="12">Tatap muka kombinasi <i>online</i> dan <i>offline</i></Text>
+                                            <Text fontSize="12">Pertemuan kombinasi <i>online</i> dan <i>offline</i></Text>
                                         </Radio>
                                     </Stack>
                                 </RadioGroup>

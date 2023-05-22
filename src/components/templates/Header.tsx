@@ -42,7 +42,7 @@ const Header = () => {
                                 <MenuItem icon={<IoPeopleCircle />}>
                                     Profil
                                 </MenuItem>
-                                <Link as={NextLink} href="https://dev-portal.its.ac.id">
+                                <Link as={NextLink} href="https://dev-my.its.ac.id">
                                     <MenuItem icon={<IoLogOut />} color="darkred">
                                         Kembali ke myITS SSO
                                     </MenuItem>
