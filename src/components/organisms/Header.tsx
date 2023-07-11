@@ -65,7 +65,7 @@ const Header = () => {
                 w="55px"
                 mt="5px"
               />
-              <Text ml="2" fontSize="20px">
+              <Text ml="2" fontSize="20px" fontWeight="medium">
                 {process.env.NEXT_PUBLIC_APP_NAME}
               </Text>
             </Link>

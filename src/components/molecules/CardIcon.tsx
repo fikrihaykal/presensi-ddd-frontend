@@ -13,10 +13,11 @@ import Image from "next/image";
 import NextLink from "next/link";
 import useDimensions from "react-cool-dimensions";
 import { IoArrowForward } from "react-icons/io5";
+import { ReactNode } from "react"
 
 interface CardIconInterface extends CardProps {
 	title: string;
-	description: string;
+	description: ReactNode;
 	icon: string;
 	url: string;
 	cardProps?: CardProps;
@@ -99,7 +100,7 @@ const CardIcon = ({
 							{title}
 						</Heading>
 						{description && (
-							<Text variant="subtitle" fontSize="14px">
+							<Text variant="subtitle" fontSize="14px" color="#8392a5">
 								{description}
 							</Text>
 						)}

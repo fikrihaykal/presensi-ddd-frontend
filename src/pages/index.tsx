@@ -33,7 +33,7 @@ const Beranda = () => {
 					>
 						<Stack justifyContent="center" h="250px" mb={5}>
 							<Heading fontSize={48} fontWeight={600}>
-								Hai, Fikri Haykal
+								Hai, Rizky Januar Akbar
 							</Heading>
 							<Text variant="subtitle" fontSize={22}>
 								{nowDay}, {nowDate} {nowMonth} {nowYear}
@@ -66,9 +66,13 @@ const Beranda = () => {
 						<Box className="grid grid-cols-12" pos="relative" gap="10px">
 							<CardIcon
 								title="Kuliah"
-								description="Lihat daftar kuliah yang Anda ampu."
+								description={
+									<>
+										Kuliah selanjutnya: <b>IF184301 - Pemrograman Berorientasi Objek (G)</b>
+									</>
+								}
 								icon="/images/icon/portfolio.svg"
-								url="/kuliah"
+								url="/kelas"
 							/>
 						</Box>
 					</Stack>

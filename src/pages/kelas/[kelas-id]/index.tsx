@@ -6,7 +6,7 @@ import { daftarKelas } from "@/data/dummy"
 import { Stack } from "@chakra-ui/react"
 
 
-const Kuliah = () => {
+const DetailKelas = () => {
 
 	return (
 		<>
@@ -16,7 +16,7 @@ const Kuliah = () => {
 						<TextHeader>Daftar Kuliah Anda</TextHeader>
 						<TextSubHeader>Semester Gasal 2023/2024</TextSubHeader>
 					</CardStaticHeader>
-					<Stack spacing="10px">
+					<Stack mt="20px" spacing="10px">
 						{
 							(daftarKelas && daftarKelas.length > 0) ?
 								daftarKelas.map(
@@ -30,4 +30,4 @@ const Kuliah = () => {
 	)
 }
 
-export default Kuliah
+export default DetailKelas

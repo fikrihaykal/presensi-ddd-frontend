@@ -10,8 +10,10 @@ import {
 import NextLink from 'next/link'
 import { IoBusinessOutline, IoCalendarClearOutline, IoChevronForward, IoTimeOutline } from 'react-icons/io5'
 import { Kelas } from '@/types/kelas'
+import { useColorMode } from '@chakra-ui/react';
 
 const KelasItem = ({ kelas }: { kelas: Kelas }) => {
+	const { colorMode, toggleColorMode } = useColorMode();
 	return (
 		<>
 			<Link as={NextLink} href={"/kelas/" + kelas.id}>

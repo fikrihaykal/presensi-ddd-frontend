@@ -30,7 +30,7 @@ const CardStatic = ({ children, ...cardProps }: CardStaticInterface) => {
 const CardStaticHeader = ({ children }: { children: ReactNode }) => {
 	return (
 		<>
-			<Stack mb="25px" spacing="0px">
+			<Stack spacing="5px">
 				{children ?? null}
 			</Stack>
 		</>
