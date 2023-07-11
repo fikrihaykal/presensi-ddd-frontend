@@ -1,57 +1,79 @@
-import { AppSettingContextType, LanguagePreference, LogoAdvHum, LogoMyIts, ThemePreference } from "@/types/app-setting";
+import { AppSettingContextType, LanguagePreference } from "@/types/app/setting";
 import { useDisclosure } from "@chakra-ui/react";
 import { ReactNode, createContext, useEffect, useState } from "react";
-import MonthName from "../lang/month.json"
-import DayName from "../lang/day.json"
+import useSWRImmutable from "swr/immutable";
+import MonthName from "@/lang/month.json"
+import DayName from "@/lang/day.json"
 
 const appSettingContextDefault: AppSettingContextType = {
     langPref: "id",
-    themePref: "light",
-    logoMyIts: "/images/app/logo-myits-blue.svg",
-    logoAdvHum: "/images/app/advhum-blue.png",
-    isNavbarOpen: false,
+    isNavbarOpen: true,
+    markerActive: 0,
+    markerTemp: -1,
+    isLoading: true,
     monthData: {},
     dayData: {},
 }
+
+const fetcherLocal = (key: string) => localStorage?.getItem(key)
 
 const AppSettingContext = createContext<AppSettingContextType>(appSettingContextDefault)
 
 export function AppSettingProvider({ children }: { children: ReactNode }) {
 
-    const [langPref, setLangPref] = useState<LanguagePreference>("id")
-    const [themePref, setThemePref] = useState<ThemePreference>("light")
+    const { data: isNavbarOpenLocal } = useSWRImmutable('is_navbar_open', fetcherLocal)
+    const { isOpen: isNavbarOpen, onToggle: toggleNavbar, onOpen, onClose } = useDisclosure()
 
-    const [logoMyIts, setLogoMyIts] = useState<LogoMyIts>("/images/app/logo-myits-blue.svg")
-    const [logoAdvHum, setLogoAdvHum] = useState<LogoAdvHum>("/images/app/advhum-blue.png")
+    const [langPref, setLangPref] = useState<LanguagePreference>("id")
+
+    const [markerActive, setMarkerActive] = useState<number>(0)
+    const [markerTemp, setMarkerTemp] = useState<number>(-1)
+    const [isLoading, setIsLoading] = useState<boolean>(true)
 
     const [monthData, setMonthData] = useState(MonthName[langPref] ?? MonthName.id)
     const [dayData, setDayData] = useState(DayName[langPref] ?? DayName.id)
 
-    const { isOpen: isNavbarOpen, onToggle: toggleNavbar } = useDisclosure()
-
+    // ********** EFFECTS ********** //
+    // Action for Language Preference Change
     useEffect(() => {
         setMonthData(MonthName[langPref] ?? MonthName.id)
         setDayData(DayName[langPref] ?? DayName.id)
-
-        if (langPref) {
-            document.documentElement.setAttribute("lang", langPref)
-            localStorage.setItem("language", langPref)
-        } else {
-            document.documentElement.setAttribute("lang", "id")
-        }
     }, [langPref]);
+
+    // Get Preferences from Local Storage
+    useEffect(() => {
+        if (isNavbarOpenLocal) {
+            isNavbarOpenLocal == "true" ? onOpen() : onClose()
+            setTimeout(() => setIsLoading(false), 400)
+        } else {
+            setTimeout(() => setIsLoading(false), 400)
+        }
+    }, [isNavbarOpenLocal])
+
+    // ********** FUNCTIONS ********** //
+    // Set Browser Settings in Local Storage
+    const navbarToggler = () => {
+        if (isNavbarOpen) {
+            localStorage.setItem('is_navbar_open', "false")
+        } else {
+            localStorage.setItem('is_navbar_open', "true")
+        }
+        toggleNavbar()
+    }
 
     return (
         <AppSettingContext.Provider value={{
             langPref,
-            themePref,
-            logoMyIts,
-            logoAdvHum,
             isNavbarOpen,
+            markerActive,
+            markerTemp,
+            isLoading,
             monthData,
             dayData,
 
-            toggleNavbar
+            navbarToggler,
+            setMarkerActive,
+            setMarkerTemp,
         }}>
             {children}
         </AppSettingContext.Provider>

@@ -1,0 +1,20 @@
+<svg id="portfolio-book" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.08" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#26b4ff"/>
+      <stop offset="1" stop-color="#2c89ff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1.594" y1="0.091" x2="0.41" y2="0.83" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2c89ff"/>
+      <stop offset="1" stop-color="#005ed6"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.526" x2="0.597" y2="0.935" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#efefef"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_212" data-name="Rectangle 212" width="1080" height="1080" fill="none"/>
+  <path id="Union_50" data-name="Union 50" d="M-13973,6906a113,113,0,0,1-113-113V5943a113,113,0,0,1,113-113h566a113,113,0,0,1,113,113v850a113,113,0,0,1-113,113Z" transform="translate(14230.001 -5828)" fill="url(#linear-gradient)"/>
+  <path id="Subtraction_13" data-name="Subtraction 13" d="M-13914,6906h-59a113.87,113.87,0,0,1-22.773-2.3,112.415,112.415,0,0,1-21.211-6.584,113,113,0,0,1-19.2-10.418,113.8,113.8,0,0,1-16.724-13.8,113.85,113.85,0,0,1-13.8-16.724,112.987,112.987,0,0,1-10.418-19.194,112.374,112.374,0,0,1-6.584-21.211A113.828,113.828,0,0,1-14086,6793V5943a113.832,113.832,0,0,1,2.3-22.774,112.363,112.363,0,0,1,6.584-21.211,113.093,113.093,0,0,1,10.418-19.194,113.9,113.9,0,0,1,13.8-16.724,113.8,113.8,0,0,1,16.724-13.8,113,113,0,0,1,19.2-10.418,112.422,112.422,0,0,1,21.211-6.584A113.827,113.827,0,0,1-13973,5830h59V6906Z" transform="translate(14230.002 -5828)" fill="url(#linear-gradient-2)"/>
+  <path id="Union_673" data-name="Union 673" d="M4919,17401a80,80,0,0,1-80-80v-37a80,80,0,0,1,80-80h278a80,80,0,0,1,80,80v37a80,80,0,0,1-80,80Zm-50-447a30,30,0,1,1,0-60h261.54a30,30,0,1,1,0,60Zm0-136a30,30,0,1,1,0-60h69.817a30,30,0,1,1,0,60Z" transform="translate(-4433.998 -16555)" fill="url(#linear-gradient-3)"/>
+</svg>
