@@ -1,8 +1,8 @@
-import { Kelas } from "@/types/kelas"
+import { Kuliah } from "@/types/kuliah"
 import { Pertemuan } from "@/types/pertemuan"
 import { Presensi } from "@/types/presensi"
 
-const daftarKelas: Array<Kelas> = [
+const daftarKuliah: Array<Kuliah> = [
     {
         id: "IF184301",
         nama: "Pemrograman Berbasis Web",
@@ -199,7 +199,7 @@ const daftarPresensi: Array<Presensi> = [
 
 
 export {
-    daftarKelas,
+    daftarKuliah,
     kolomPertemuan,
     daftarPertemuan,
     kolomPresensi,

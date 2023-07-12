@@ -9,14 +9,14 @@ import {
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { IoBusinessOutline, IoCalendarClearOutline, IoChevronForward, IoTimeOutline } from 'react-icons/io5'
-import { Kelas } from '@/types/kelas'
+import { Kuliah } from '@/types/kuliah'
 import { useColorMode } from '@chakra-ui/react';
 
-const KelasItem = ({ kelas }: { kelas: Kelas }) => {
+const KuliahItem = ({ kuliah }: { kuliah: Kuliah }) => {
 	const { colorMode, toggleColorMode } = useColorMode();
 	return (
 		<>
-			<Link as={NextLink} href={"/kelas/" + kelas.id}>
+			<Link as={NextLink} href={"/kuliah/" + kuliah.id}>
 				<Stack
 					justify="space-between"
 					direction="row"
@@ -31,25 +31,25 @@ const KelasItem = ({ kelas }: { kelas: Kelas }) => {
 						</Stack>
 						<Stack spacing="3px" fontSize="sm">
 							<Box>
-								<Badge colorScheme="itsblue" fontWeight="semibold">{kelas.id}</Badge>
+								<Badge colorScheme="itsblue" fontWeight="semibold">{kuliah.id}</Badge>
 							</Box>
 							<Box>
 								<Text fontFamily="poppins" color="emphasized" fontSize="15px" fontWeight="medium">
-									{kelas.nama}
+									{kuliah.nama}
 								</Text>
 							</Box>
 							<Stack direction={{ base: 'column', sm: 'row' }} spacing="2" fontSize="13px" color="#8392a5">
 								<HStack>
 									<IoCalendarClearOutline />
-									<Text color="muted">{kelas.hari}</Text>
+									<Text color="muted">{kuliah.hari}</Text>
 								</HStack>
 								<HStack>
 									<IoTimeOutline />
-									<Text color="muted">{kelas.jam}</Text>
+									<Text color="muted">{kuliah.jam}</Text>
 								</HStack>
 								<HStack>
 									<IoBusinessOutline />
-									<Text color="muted">{kelas.lokasi}</Text>
+									<Text color="muted">{kuliah.lokasi}</Text>
 								</HStack>
 							</Stack>
 						</Stack>
@@ -64,4 +64,4 @@ const KelasItem = ({ kelas }: { kelas: Kelas }) => {
 	)
 }
 
-export default KelasItem
+export default KuliahItem

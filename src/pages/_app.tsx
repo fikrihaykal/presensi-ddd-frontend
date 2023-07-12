@@ -12,6 +12,7 @@ import AppSettingContext, {
 	AppSettingProvider,
 } from "@/providers/AppSettingProvider";
 import "@/styles/globals.css";
+import "nprogress/nprogress.css";
 import theme from "@/theme/theme";
 import { preloadImages } from "@/utils/image_preload";
 import {
@@ -30,6 +31,7 @@ import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { ReactNode, useContext, useEffect, useState } from "react";
+import dynamic from 'next/dynamic'
 
 const AppWrapper = ({ children }: { children: ReactNode }) => {
 	const { isLoading } = useContext(AppSettingContext);
@@ -79,6 +81,13 @@ const AppWrapper = ({ children }: { children: ReactNode }) => {
 	);
 };
 
+const TopProgressBar = dynamic(
+	() => {
+		return import("../components/molecules/TopProgressBar");
+	},
+	{ ssr: false },
+);
+
 export default function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 	const [queryClient] = useState(() => new QueryClient());
@@ -117,6 +126,7 @@ export default function App({ Component, pageProps }: AppProps) {
 															document.getElementById("top")?.scrollIntoView();
 														}}
 													>
+														<TopProgressBar />
 														<Component key={router.route} {...pageProps} />
 													</AnimatePresence>
 												</Hydrate>

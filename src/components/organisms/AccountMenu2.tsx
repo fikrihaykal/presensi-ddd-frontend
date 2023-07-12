@@ -61,7 +61,7 @@ const AccountMenu = () => {
               alignItems="start"
               ml="15px"
             >
-              <Text color="#232323">Administrator</Text>
+              <Text color="#232323">Dosen</Text>
               <Text color="#232323">Rizky Januar Akbar</Text>
             </Flex>
 
@@ -111,7 +111,7 @@ const AccountMenu = () => {
           <ModalCloseButton />
           <ModalBody>
             <Text mb="10px">
-              You are currently accessing as <b>Super Administrator</b>.
+              You are currently accessing as <b>Dosen</b>.
             </Text>
             <Select placeholder="Pilih salah satu">
               <option value="sa">Super Administrator</option>

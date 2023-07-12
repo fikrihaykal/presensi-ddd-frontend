@@ -8,7 +8,7 @@ const menuItem: Array<MenuItem> = [
     },
     {
         name: "Kuliah",
-        url: "/kelas",
+        url: "/kuliah",
         icon: "portfolio.svg"
     }
 ]

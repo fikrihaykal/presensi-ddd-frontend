@@ -45,7 +45,7 @@ const Beranda = () => {
 
 						<Image
 							display={{ base: "none", lg: "block" }}
-							src="/images/app/myITS-DesignSystem.svg"
+							src="/images/favicon.png"
 							h="200px"
 						/>
 					</Stack>
@@ -72,7 +72,7 @@ const Beranda = () => {
 									</>
 								}
 								icon="/images/icon/portfolio.svg"
-								url="/kelas"
+								url="/kuliah"
 							/>
 						</Box>
 					</Stack>

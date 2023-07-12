@@ -1,4 +1,4 @@
-interface Kelas {
+interface Kuliah {
     id: string,
     nama: string,
     hari: string,
@@ -6,4 +6,4 @@ interface Kelas {
     lokasi: string
 }
 
-export { Kelas }
+export { Kuliah }

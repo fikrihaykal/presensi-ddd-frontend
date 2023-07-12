@@ -18,10 +18,15 @@ interface AppSettingContextType {
     setMarkerTemp?: any;
 }
 
+interface KuliahContextType{
+    daftarKuliah: Array<Kuliah>
+}
+
 export {
     LanguagePreference,
     ThemePreference,
     LogoMyIts,
     LogoAdvHum,
-    AppSettingContextType
+    AppSettingContextType,
+    KuliahContextType
 }

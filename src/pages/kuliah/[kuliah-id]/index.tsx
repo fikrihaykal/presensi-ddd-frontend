@@ -1,12 +1,12 @@
 import PageTransition from "@/components/PageTransitions"
 import { TextHeader, TextSubHeader } from "@/components/atoms/Text"
 import { CardStatic, CardStaticHeader } from "@/components/molecules/CardStatic"
-import KelasItem from "@/components/molecules/KelasItem"
-import { daftarKelas } from "@/data/dummy"
+import KuliahItem from "@/components/molecules/KuliahItem"
+import { daftarKuliah } from "@/data/dummy"
 import { Stack } from "@chakra-ui/react"
 
 
-const DetailKelas = () => {
+const DetailKuliah = () => {
 
 	return (
 		<>
@@ -18,9 +18,9 @@ const DetailKelas = () => {
 					</CardStaticHeader>
 					<Stack mt="20px" spacing="10px">
 						{
-							(daftarKelas && daftarKelas.length > 0) ?
-								daftarKelas.map(
-									(kelas, key) => <KelasItem kelas={kelas} key={"list-kelas-" + key} />
+							(daftarKuliah && daftarKuliah.length > 0) ?
+								daftarKuliah.map(
+									(kuliah, key) => <KuliahItem kuliah={kuliah} key={"list-kuliah-" + key} />
 								) : null
 						}
 					</Stack>
@@ -30,4 +30,4 @@ const DetailKelas = () => {
 	)
 }
 
-export default DetailKelas
+export default DetailKuliah
