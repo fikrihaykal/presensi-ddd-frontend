@@ -13,7 +13,7 @@ import {
     FilterFn,
 } from '@tanstack/react-table'
 import { useState } from "react";
-import { DebouncedInput, Filter, fuzzyFilter } from "@/utils/table";
+import { DebouncedInput, Filter, fuzzyFilter } from "@/base/utils/table";
 import { RankingInfo } from '@tanstack/match-sorter-utils';
 import { Box, Button, HStack, Heading, Input, Select, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from '@chakra-ui/react';
 import { BsChevronExpand } from 'react-icons/bs';

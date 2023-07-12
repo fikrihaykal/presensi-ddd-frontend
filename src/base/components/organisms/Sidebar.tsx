@@ -3,7 +3,7 @@ import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import MainMenu from "./MainMenu";
 import AccountMenu from "./AccountMenu";
 import { useContext } from "react";
-import AppSettingContext from "@/providers/AppSettingProvider";
+import AppSettingContext from "@/base/providers/AppSettingProvider";
 import AccountMenu2 from "./AccountMenu2";
 import MainMenu2 from "./MainMenu2";
 

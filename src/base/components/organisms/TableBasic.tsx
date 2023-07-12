@@ -4,7 +4,7 @@ import {
     ColumnDef,
     flexRender,
 } from '@tanstack/react-table'
-import { fuzzyFilter } from "@/utils/table";
+import { fuzzyFilter } from "@/base/utils/table";
 import { Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from '@chakra-ui/react';
 
 const TableBasic = ({ columns, data }: { columns: ColumnDef<any, any>[], data: any[] }) => {

@@ -3,7 +3,7 @@ import MainMenuItem from "../molecules/MainMenuItem";
 import { menuItem } from "@/data/menu";
 import { motion } from "framer-motion";
 import MainMenuItem2 from "../molecules/MainMenuItem2";
-import AppSettingContext from "@/providers/AppSettingProvider";
+import AppSettingContext from "@/base/providers/AppSettingProvider";
 import { useContext } from "react";
 
 // Menu item = isParentMenu, Icon, name, link

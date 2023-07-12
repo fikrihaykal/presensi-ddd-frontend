@@ -1,4 +1,4 @@
-import AppSettingContext from "@/providers/AppSettingProvider";
+import AppSettingContext from "@/base/providers/AppSettingProvider";
 import {
   Box,
   Button,

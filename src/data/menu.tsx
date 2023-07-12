@@ -1,4 +1,4 @@
-import { MenuItem } from '@/types/app/menu-item'
+import { MenuItem } from '@/base/types/menu-item'
 
 const menuItem: Array<MenuItem> = [
     {

@@ -6,8 +6,8 @@ import {
 } from '@chakra-ui/react'
 import { IoChevronDown, IoChevronUp } from "react-icons/io5"
 import NextLink from 'next/link'
-import { MenuItem } from '@/types/app/menu-item'
-import AppSettingContext from '@/providers/AppSettingProvider'
+import { MenuItem } from '@/base/types/menu-item'
+import AppSettingContext from '@/base/providers/AppSettingProvider'
 import { useContext } from 'react'
 
 const MainMenuItem = ({ menuItem, menuIndex }: { menuItem: MenuItem, menuIndex: number }) => {

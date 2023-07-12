@@ -1,4 +1,4 @@
-// import { fuzzySort } from "@/utils/table";
+// import { fuzzySort } from "@/base/utils/table";
 // import { Text } from "@chakra-ui/react";
 // import { ColumnDef } from "@tanstack/table-core";
 

@@ -12,7 +12,7 @@ import {
     FilterFn,
 } from '@tanstack/react-table'
 import { useState } from "react";
-import { DebouncedInput, Filter, fuzzyFilter } from "@/utils/table";
+import { DebouncedInput, Filter, fuzzyFilter } from "@/base/utils/table";
 import { RankingInfo } from '@tanstack/match-sorter-utils';
 import { Box, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr, Button, Input, InputGroup, Stack, HStack } from '@chakra-ui/react';
 import { useInfiniteQuery } from "@tanstack/react-query";

@@ -1,9 +1,9 @@
-import { AppSettingContextType, LanguagePreference } from "@/types/app/setting";
+import { AppSettingContextType, LanguagePreference } from "@/base/types/setting";
 import { useDisclosure } from "@chakra-ui/react";
 import { ReactNode, createContext, useEffect, useState } from "react";
 import useSWRImmutable from "swr/immutable";
-import MonthName from "@/lang/month.json"
-import DayName from "@/lang/day.json"
+import MonthName from "@/base/lang/month.json"
+import DayName from "@/base/lang/day.json"
 
 const appSettingContextDefault: AppSettingContextType = {
     langPref: "id",

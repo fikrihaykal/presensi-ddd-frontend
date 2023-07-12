@@ -1,5 +1,5 @@
-import PageTransition from "@/components/PageTransitions";
-import CardIcon from "@/components/molecules/CardIcon";
+import PageTransition from "@/base/components/PageTransitions";
+import CardIcon from "@/base/components/molecules/CardIcon";
 import {
 	Box,
 	Heading,
@@ -8,7 +8,7 @@ import {
 	Text,
 } from "@chakra-ui/react";
 import { useContext } from 'react'
-import AppSettingContext from '@/providers/AppSettingProvider'
+import AppSettingContext from '@/base/providers/AppSettingProvider'
 
 const Beranda = () => {
 	const { monthData, dayData } = useContext(AppSettingContext)

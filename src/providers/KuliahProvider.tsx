@@ -1,4 +1,4 @@
-import { KuliahContextType } from "@/types/app/setting";
+import { KuliahContextType } from "@/base/types/setting";
 import { Kuliah } from "@/types/kuliah";
 import { ReactNode, createContext, useEffect, useState } from "react";
 
