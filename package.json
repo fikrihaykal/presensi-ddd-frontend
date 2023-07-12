@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^2.6.1",
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
+    "@emotion/weak-memoize": "^0.3.1",
     "@faker-js/faker": "^8.0.2",
     "@fontsource/inter": "^5.0.2",
     "@fontsource/open-sans": "^5.0.2",
